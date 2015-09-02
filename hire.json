@@ -1,0 +1,47 @@
+{
+  "company": {
+    "basics": {
+      "name": "Pied Piper",
+      "label": "We are a small, focused, business-facing compression company intent on providing the absolute best in data-management solutions.",
+      "email": "richard.hendriks@mail.com",
+      "phone": "(912) 555-4321",
+      "website": "http://www.piedpiper.com/",
+      "location": {
+        "address": "2712 Broadway St",
+        "postalCode": "CA 94115",
+        "city": "San Francisco",
+        "countryCode": "US",
+        "region": "California"
+      }
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "SiliconHBO",
+        "url": "https://twitter.com/SiliconHBO"
+      },
+      {
+        "network": "Facebook",
+        "username": "SiliconHBO",
+        "url": "http://www.facebook.com/SiliconHBO"
+      }
+    ]
+  },
+  "job": {
+    "jobTitle": "Programmer",
+    "workLocation": {
+      "onSite": false,
+      "remote": true
+    },
+    "time": {
+      "fullTime": false,
+      "partTime": true
+    },
+    "tags": [
+      "C#",
+      "WPF",
+      "MVVM"
+    ],
+    "description": "I am looking for someone to do some stuffs."
+  }
+}
