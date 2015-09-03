@@ -37,6 +37,14 @@
       "fullTime": false,
       "partTime": true
     },
+    "benefits": [
+      "health insurance",
+      "transportation benefits"
+    ],
+    "income": {
+      "from": 100000,
+      "to": 120000
+    },
     "tags": [
       "C#",
       "WPF",
