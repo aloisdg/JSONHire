@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Hire Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "company": {
+      "type": "object",
+      "properties": {
+        "basics": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string",
+              "description": "e.g. Web Developer or Dark Lord"
+            },
+            "email": {
+              "type": "string",
+              "description": "e.g. dark.lord@gmail.com",
+              "format": "email"
+            },
+            "phone": {
+              "type": "string",
+              "description": "Phone numbers are stored as strings so use any format you like, e.g. 712-117-2923"
+            },
+            "website": {
+              "type": "string",
+              "description": "URL (as per RFC 3986) to your website, e.g. personal homepage",
+              "format": "uri"
+            },
+            "location": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "string",
+                  "description": "To add multiple address lines, use \n. For example, 1234 Glücklichkeit Straße\nHinterhaus 5. Etage li."
+                },
+                "postalCode": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "countryCode": {
+                  "type": "string",
+                  "description": "code as per ISO-3166-1 ALPHA-2, e.g. US, AU, IN"
+                },
+                "region": {
+                  "type": "string",
+                  "description": "The general region where you live. Can be a US state, or a province, for instance."
+                }
+              }
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "email",
+            "phone",
+            "website",
+            "location"
+          ]
+        },
+        "profiles": {
+          "type": "array",
+          "description": "Specify any number of social networks that you participate in",
+          "items": [
+            {
+              "type": "object",
+              "additionalProperties": true,
+              "properties": {
+                "network": {
+                  "type": "string",
+                  "description": "e.g. Facebook or Twitter"
+                },
+                "username": {
+                  "type": "string",
+                  "description": "e.g. neutralthoughts"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "URL (as per RFC 3986) to your account",
+                  "format": "uri"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "basics",
+        "profiles"
+      ]
+    },
+    "job": {
+      "type": "object",
+      "properties": {
+        "jobTitle": {
+          "type": "string"
+        },
+        "workLocation": {
+          "additionalProperties": false,
+          "type": "object",
+          "properties": {
+            "onSite": {
+              "type": "boolean"
+            },
+            "remote": {
+              "type": "boolean"
+            }
+          }
+        },
+        "time": {
+          "type": "object",
+          "properties": {
+            "fullTime": {
+              "type": "boolean"
+            },
+            "partTime": {
+              "type": "boolean"
+            }
+          }
+        },
+        "benefits": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "income": {
+          "type": "object",
+          "properties": {
+            "from": {
+              "type": "integer"
+            },
+            "to": {
+              "type": "integer"
+            }
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "description": {
+          "type": "string",
+          "description": "Write here the content of the post."
+        }
+      }
+    }
+  },
+  "required": [
+    "company",
+    "job"
+  ]
+}
